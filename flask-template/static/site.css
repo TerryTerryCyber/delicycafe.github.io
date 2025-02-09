@@ -1,39 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #2c3e50;
+}
+
 .navbar {
-    background-color: #2c3e50; /* Darker shade for better contrast */
-    font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ecf0f1; /* Lighter color for better readability */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar a {
     text-decoration: none;
     color: inherit;
+    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #3498db; /* Add hover effect */
+    color: #3498db;
 }
 
 .navbar-brand {
-    font-size: 1.5em; /* Slightly larger for emphasis */
+    font-size: 1.5em;
     font-weight: 700;
 }
 
 .navbar-item {
     font-variant: small-caps;
-    margin-left: 30px;
 }
 
-.body-content {
-    padding: 20px; /* Increased padding for better spacing */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* Improved readability */
-    color: #2c3e50; /* Consistent color scheme */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #34495e;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.featured-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.item {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.about-us {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -45,5 +106,14 @@
     .navbar-item {
         margin-left: 0;
         margin-top: 10px;
+    }
+
+    .featured-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%;
     }
 }
