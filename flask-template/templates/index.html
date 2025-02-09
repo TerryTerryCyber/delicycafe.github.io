@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicy Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Delicy Cafe</div>
+        <div class="navbar-item"><a href="home.html">Home</a></div>
+        <div class="navbar-item"><a href="about.html">About</a></div>
+        <div class="navbar-item"><a href="menu.html">Menu</a></div>
+        <div class="navbar-item"><a href="{{ url_for('contact') }}">Contact</a></div>
+    </nav>
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{{ url_for('static', filename='site.js') }}"></script>
+</body>
+</html>

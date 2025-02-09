@@ -1,5 +1,29 @@
 {% extends 'base.html' %}
 
+{% block title %}Home{% endblock %}
+
 {% block content %}
-    <h1>{% block title %} Welcome to your Flask app! {% endblock %}</h1>
+    <div class="container">
+        <h1>Welcome to Delicy Cafe!</h1>
+        <p>an nice roblox game that is a cafe and has polite staff!</p>
+
+        <div class="featured-items">
+            <h2>We have the best staff</h2>
+            <div class="item">
+                <img src="" alt="Coffee">
+                <h3>Drinks</h3>
+                <p>We carry drinks, the tastiest you can imagine.</p>
+            </div>
+            <div class="item">
+                <img src="{{ url_for('static', filename='images/pastry.jpg') }}" alt="Pastry">
+                <h3>Delicious Pastries</h3>
+                <p>Freshly baked every day, with a variety of flavors.</p>
+            </div>
+        </div>
+
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>Delicy Cafe has been serving the community since 2020. Our mission is to provide high-quality coffee and pastries in a cozy and welcoming environment.</p>
+        </div>
+    </div>
 {% endblock %}
